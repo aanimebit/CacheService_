@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheService_", "CacheService_\CacheService_.csproj", "{23D80C3C-9942-4825-85F9-4960F69C729B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheService_Test", "CacheService_Test\CacheService_Test.csproj", "{22CDC794-FB7A-4A53-BEDD-76561B395366}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23D80C3C-9942-4825-85F9-4960F69C729B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23D80C3C-9942-4825-85F9-4960F69C729B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23D80C3C-9942-4825-85F9-4960F69C729B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23D80C3C-9942-4825-85F9-4960F69C729B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22CDC794-FB7A-4A53-BEDD-76561B395366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22CDC794-FB7A-4A53-BEDD-76561B395366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22CDC794-FB7A-4A53-BEDD-76561B395366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22CDC794-FB7A-4A53-BEDD-76561B395366}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {673AC407-133F-4E49-9D4B-720D638E426A}
+	EndGlobalSection
+EndGlobal
