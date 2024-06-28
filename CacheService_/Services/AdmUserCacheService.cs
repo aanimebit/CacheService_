@@ -5,7 +5,7 @@ using CacheService_.DatabaseLocal;
 
 namespace CacheService_.Services
 {
-    public class AdmUserCacheService : IAdmUserCacheService
+    public class AdmUserCacheService : IUserCacheService<AdmUserTaskCacheEntity>
     {
         readonly AppDbContext _context;
 
@@ -14,7 +14,7 @@ namespace CacheService_.Services
             _context = context;
         }
 
-        public async void AggregateAdmUserTasks(int districtAvailable)
+        public async void AggregateUserTasks(int districtAvailable)
         {
             var cache = from categories in _context.AdmUserCategories
                         from tasks in _context.AdmUserTasks
@@ -48,7 +48,7 @@ namespace CacheService_.Services
             }
         }
 
-        public List<AdmUserTaskCacheEntity> GetAdmUserCache()
+        public List<AdmUserTaskCacheEntity> GetUserCache()
         {
             return _context.AdmUserTaskCaches.ToList();
         }

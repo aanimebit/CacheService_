@@ -2,6 +2,8 @@ using CacheService_.DatabaseLocal;
 using Microsoft.EntityFrameworkCore;
 using CacheService_.Services.ServiceInterfaces;
 using CacheService_.Services;
+using CacheService_.Entities.AdmEntities;
+using CacheService_.Entities.UserEntities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +12,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseInMemoryDatabase("InMemoryDb"));
 
 //services configure
-builder.Services.AddScoped<IAdmUserCacheService, AdmUserCacheService>();
-builder.Services.AddScoped<IUserCacheService, UserCacheService>();
+builder.Services.AddScoped<IUserCacheService<UserTaskCacheEntity>, UserCacheService>();
+builder.Services.AddScoped<IUserCacheService<AdmUserTaskCacheEntity>, AdmUserCacheService>();
 builder.Services.AddScoped<IUserCategoryService, UserCategoryService>();
 builder.Services.AddScoped<IUserTaskResponsibilityService, UserTaskResponsibilityService>();
 

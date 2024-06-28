@@ -16,14 +16,14 @@ namespace CacheService_.Controllers
         private readonly AppDbContext _context;
         private readonly ILogger<UserController> _logger;
         private readonly IUserTaskResponsibilityService _userTaskResponsibilityService;
-        private readonly IUserCacheService _userCacheService;
+        private readonly IUserCacheService<UserTaskCacheEntity> _userCacheService;
         private readonly IUserCategoryService _userCategoryService;
 
         public UserController(
             AppDbContext context,
             ILogger<UserController> logger,
             IUserTaskResponsibilityService userTaskResponsibilityService,
-            IUserCacheService userCacheService,
+            IUserCacheService<UserTaskCacheEntity> userCacheService,
             IUserCategoryService userCategoryService)
         {
             _logger = logger;

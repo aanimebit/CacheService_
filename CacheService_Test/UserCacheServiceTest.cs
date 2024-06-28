@@ -12,7 +12,7 @@ namespace CacheService_Test
     public class UserCacheServiceTest
     {
         private AppDbContext _context;
-        private IUserCacheService _userCacheService;
+        private IUserCacheService<UserTaskCacheEntity> _userCacheService;
 
         [TestInitialize]
         public void Startup()

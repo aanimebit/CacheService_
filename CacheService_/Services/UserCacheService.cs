@@ -4,7 +4,7 @@ using CacheService_.Services.ServiceInterfaces;
 
 namespace CacheService_.Services
 {
-    public class UserCacheService : IUserCacheService
+    public class UserCacheService : IUserCacheService<UserTaskCacheEntity>
     {
         readonly AppDbContext _context;
         public UserCacheService(AppDbContext context)

@@ -13,12 +13,12 @@ namespace CacheService_.Controllers
         #region interfaces and db initialization
         private readonly AppDbContext _context;
         private readonly ILogger<AdmUserController> _logger;
-        private readonly IAdmUserCacheService _admUserCacheService;
+        private readonly IUserCacheService<AdmUserTaskCacheEntity> _admUserCacheService;
 
         public AdmUserController(
             AppDbContext context,
             ILogger<AdmUserController> logger,
-            IAdmUserCacheService admUserCacheService)
+            IUserCacheService<AdmUserTaskCacheEntity> admUserCacheService)
         {
             _logger = logger;
             _context = context;
@@ -29,7 +29,7 @@ namespace CacheService_.Controllers
         [HttpGet("tasks/cache")]
         public List<AdmUserTaskCacheEntity> GetAdmUserCache()
         {
-            return _admUserCacheService.GetAdmUserCache();
+            return _admUserCacheService.GetUserCache();
         }
 
         [HttpPost("tasks/cache/aggregation")]
@@ -37,7 +37,7 @@ namespace CacheService_.Controllers
         {
             try
             {
-                _admUserCacheService.AggregateAdmUserTasks(districtAvailable);
+                _admUserCacheService.AggregateUserTasks(districtAvailable);
                 return Ok(200);
             }
             catch (Exception ex)

@@ -12,7 +12,7 @@ namespace CacheService_Test
     public class AdmUserCacheServiceTest
     {
         private AppDbContext _context;
-        private IAdmUserCacheService _admUserCacheService;
+        private IUserCacheService<AdmUserTaskCacheEntity> _admUserCacheService;
 
         [TestInitialize]
         public void Startup()
@@ -34,7 +34,7 @@ namespace CacheService_Test
         {
             int districtAvailable = 1;
 
-            _admUserCacheService.AggregateAdmUserTasks(districtAvailable);
+            _admUserCacheService.AggregateUserTasks(districtAvailable);
 
             List<AdmUserTaskCacheEntity> cache = _context.AdmUserTaskCaches.ToList();
 
